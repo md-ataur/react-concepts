@@ -5,14 +5,14 @@ class MouseTracker extends React.Component {
         super(props);
         this.state = {
             x: 0,
-            y: 0
+            y: 0,
         };
     }
 
     handleMouseMove = (e) => {
         this.setState({
             x: e.clientX,
-            y: e.clientY
+            y: e.clientY,
         });
     };
 
