@@ -1,22 +1,25 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Layout from './components/Dashboard/Layout/Layout';
+import Form from './components/Form/Form';
+import HandlingEvents from './components/HandlingEvents/HandlingEvents';
 import RenderProps from './components/RenderProps/RenderProps';
-import Header from './components/Shared/Header/Header';
 import StateAndLifecycle from './components/StateAndLifecycle/StateAndLifecycle';
-import Home from './Pages/Home/Home';
 
 function App() {
     return (
         <>
             <BrowserRouter>
-                <div className="container">
-                    <Header />
+                <div>
                     <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="render-props" element={<RenderProps />} />
-                        <Route
-                            path="state-lifecycle"
-                            element={<StateAndLifecycle locale="bn-BD" />}
-                        />
+                        <Route path="/" element={<Layout />}>
+                            <Route
+                                path="state-lifecycle"
+                                element={<StateAndLifecycle locale="bn-BD" />}
+                            />
+                            <Route path="handling-events" element={<HandlingEvents />} />
+                            <Route path="form" element={<Form />} />
+                            <Route path="render-props" element={<RenderProps />} />
+                        </Route>
                     </Routes>
                 </div>
             </BrowserRouter>
