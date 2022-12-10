@@ -81,6 +81,50 @@ const Sidebar = ({ isSideMenuOpen }) => {
                         </div>
                     </div>
                 </NavLink>
+                <div className="parent-nav">
+                    <p>Component Vs Inheritance</p>
+                    <ul>
+                        <li>
+                            <NavLink
+                                to="/inheritance"
+                                className={({ isActive }) =>
+                                    isActive ? 'menu-active-class' : 'no-active-class'
+                                }
+                            >
+                                <div className="menu-list">Inheritance</div>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to="/composition"
+                                className={({ isActive }) =>
+                                    isActive ? 'menu-active-class' : 'no-active-class'
+                                }
+                            >
+                                <div className="menu-list">Composition</div>
+                            </NavLink>
+                        </li>
+                    </ul>
+                </div>
+                <NavLink
+                    to="/hoc"
+                    end
+                    className={({ isActive }) =>
+                        isActive ? 'menu-active-class' : 'no-active-class'
+                    }
+                >
+                    <div className="menu-list">
+                        <div className="menu-list-left">
+                            <span
+                                className={
+                                    !isSideMenuOpen ? 'sidebar-closed-menu' : 'menu-list-left-text'
+                                }
+                            >
+                                Higher Order Component
+                            </span>
+                        </div>
+                    </div>
+                </NavLink>
             </div>
         </div>
     );
