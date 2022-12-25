@@ -9,7 +9,7 @@ class StateAndLifecycle extends React.Component {
     // This function calls after component has been rendered to the real dom
     componentDidMount() {
         this.clockTimer = setInterval(() => {
-            console.log('Interval running');
+            console.log('Interval is running');
             this.tick();
         }, 1000);
     }
@@ -28,10 +28,12 @@ class StateAndLifecycle extends React.Component {
     render() {
         return (
             <>
-                <p>
+                <h4>
                     How to declare a class component and use lifecycle hooks like componentDidMount,
-                    componentWillUnmount. Also uses setInterVal() and clearInterval() function.
-                </p>
+                    componentWillUnmount. <br /> Also used setInterVal() and clearInterval()
+                    function.
+                </h4>
+                <hr />
                 <h1>
                     <span>{this.state.date.toLocaleTimeString(this.props.locale)}</span>
                 </h1>

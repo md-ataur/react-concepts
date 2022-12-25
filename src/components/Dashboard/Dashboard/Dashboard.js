@@ -14,7 +14,7 @@ const Dashboard = ({ setIsSideMenuOpenFunction, isSideMenuOpen }) => {
             <div className="dash-header">
                 <div className="menu-icon">
                     <span>
-                        <GrMenu onClick={setIsSideMenuOpenFunction} />
+                        <GrMenu /* onClick={setIsSideMenuOpenFunction}  */ />
                     </span>
                 </div>
             </div>

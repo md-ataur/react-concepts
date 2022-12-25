@@ -62,27 +62,8 @@ const Sidebar = ({ isSideMenuOpen }) => {
                         </div>
                     </div>
                 </NavLink>
-                <NavLink
-                    to="/render-props"
-                    end
-                    className={({ isActive }) =>
-                        isActive ? 'menu-active-class' : 'no-active-class'
-                    }
-                >
-                    <div className="menu-list">
-                        <div className="menu-list-left">
-                            <span
-                                className={
-                                    !isSideMenuOpen ? 'sidebar-closed-menu' : 'menu-list-left-text'
-                                }
-                            >
-                                Render Props
-                            </span>
-                        </div>
-                    </div>
-                </NavLink>
                 <div className="parent-nav">
-                    <p>Component Vs Inheritance</p>
+                    <p>Composition Vs Inheritance</p>
                     <ul>
                         <li>
                             <NavLink
@@ -125,6 +106,60 @@ const Sidebar = ({ isSideMenuOpen }) => {
                         </div>
                     </div>
                 </NavLink>
+                <NavLink
+                    to="/render-props"
+                    end
+                    className={({ isActive }) =>
+                        isActive ? 'menu-active-class' : 'no-active-class'
+                    }
+                >
+                    <div className="menu-list">
+                        <div className="menu-list-left">
+                            <span
+                                className={
+                                    !isSideMenuOpen ? 'sidebar-closed-menu' : 'menu-list-left-text'
+                                }
+                            >
+                                Render Props
+                            </span>
+                        </div>
+                    </div>
+                </NavLink>
+                <div className="parent-nav">
+                    <p>Hooks</p>
+                    <ul>
+                        <li>
+                            <NavLink
+                                to="/useEffect"
+                                className={({ isActive }) =>
+                                    isActive ? 'menu-active-class' : 'no-active-class'
+                                }
+                            >
+                                <div className="menu-list">UseEffect</div>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to="/UseCallbackAndMemo"
+                                className={({ isActive }) =>
+                                    isActive ? 'menu-active-class' : 'no-active-class'
+                                }
+                            >
+                                <div className="menu-list">useCallback & useMemo</div>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to="/UseRefAndForwardRef"
+                                className={({ isActive }) =>
+                                    isActive ? 'menu-active-class' : 'no-active-class'
+                                }
+                            >
+                                <div className="menu-list">useRef & forwardRef</div>
+                            </NavLink>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     );

@@ -40,10 +40,11 @@ class HandlingEvents extends React.Component {
     render() {
         return (
             <div>
-                <p>
+                <h4>
                     How to use event handler and clear this confusion using bind() or arrow
                     function.
-                </p>
+                </h4>
+                <hr />
                 <h1>{this.state.date.toLocaleTimeString(this.state.locale)}</h1>
                 <button onClick={this.handleClick}>Click here</button>
                 {/* <button onClick={this.handleClick.bind(this)}>Click here</button> */}

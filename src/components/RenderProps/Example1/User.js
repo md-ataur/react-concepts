@@ -1,3 +1,3 @@
 export default function User({ render }) {
-    return render(true);
+    return <p>{render(true)}</p>;
 }

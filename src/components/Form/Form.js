@@ -29,7 +29,7 @@ class Form extends React.Component {
 
         return (
             <div>
-                <p>Controlled component and uncontrolled component</p>
+                <h4>Controlled component and uncontrolled component</h4>
                 <br />
                 <input type="text" value={title} onChange={this.handleChange} />
                 <p>{title}</p>

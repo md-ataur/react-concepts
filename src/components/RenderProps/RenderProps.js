@@ -3,16 +3,22 @@ import User from './Example1/User';
 import ClickCounter from './Example2/ClickCounter';
 import Counter from './Example2/Counter';
 import HoverCounter from './Example2/HoverCounter';
-import Cat from './Example3/Cat';
-import MouseTracker from './Example3/MouseTracker';
 
 const RenderProps = () => {
     return (
         <div>
-            <h1>Eample 1</h1>
+            <h4>
+                Render prop is a pattern for sharing logic between React components using a prop
+                whose value is a function. The parent component pass a function to the child
+                component as a render props, and the child component calls that function instead of
+                implementing its own logic.
+            </h4>
+            <p>- Avoid code duplication</p>
+            <h3>Eample 1</h3>
             <User render={(isLoggedIn) => (isLoggedIn ? 'Karim' : 'Guest')} />
+            <hr />
 
-            <h1>Eample 2</h1>
+            <h3>Eample 2</h3>
             <Counter
                 render={(count, incrementCount) => (
                     <ClickCounter count={count} handleCount={incrementCount} />
@@ -23,9 +29,6 @@ const RenderProps = () => {
                     <HoverCounter count={count} handleCount={incrementCount} />
                 )}
             />
-
-            <h1>Eample 3</h1>
-            <MouseTracker render={(mouse) => <Cat mouse={mouse} />} />
         </div>
     );
 };

@@ -2,9 +2,10 @@ import React from 'react';
 
 class HoverCounter extends React.Component {
     render() {
+        const { count, handleCount } = this.props;
         return (
             <div>
-                <h3 onMouseOver={this.props.handleCount}>Hover Count {this.props.count}</h3>
+                <h4 onMouseOver={handleCount}>Hover Count {count}</h4>
             </div>
         );
     }

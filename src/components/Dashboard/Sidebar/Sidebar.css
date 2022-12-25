@@ -24,20 +24,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 16px;
-  margin: 0;
+  padding: 5px 10px;
+  margin: 0 0 6px;
   border-radius: 6px;
 }
 
 .nav-menu ul {
   margin: 0;
-  padding: 10px 16px 0;
+  padding: 10px 0px 0;
   list-style: none;
 }
 
 .parent-nav {
   margin: 0;
-  padding: 10px 16px;
+  padding: 0 10px 0;
 }
 
 .nav-menu ul li a{
@@ -70,7 +70,6 @@
   display: block;
   color: #19b846;
   border-radius: 7px;
-  background: #effaf2;
   transition: all 0.05s ease-in-out;
 }
 

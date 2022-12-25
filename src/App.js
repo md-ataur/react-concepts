@@ -6,7 +6,12 @@ import Layout from './components/Dashboard/Layout/Layout';
 import Form from './components/Form/Form';
 import HandlingEvents from './components/HandlingEvents/HandlingEvents';
 import ClickCounter from './components/HigherOrderComponent/ClickCounter';
+import ClickCounterHoc from './components/HigherOrderComponent/HOC/ClickCounter';
+import HoverCounterHoc from './components/HigherOrderComponent/HOC/HoverCounter';
 import HoverCounter from './components/HigherOrderComponent/HoverCounter';
+import UseCallbackAndMemo from './components/Hooks/UseCallbackAndMemo/UseCallbackAndMemo';
+import UseEffect from './components/Hooks/UseEffect/UseEffect';
+import UseRefAndForwardRef from './components/Hooks/UseRefAndForwardRef/UseRefAndForwardRef';
 import RenderProps from './components/RenderProps/RenderProps';
 import StateAndLifecycle from './components/StateAndLifecycle/StateAndLifecycle';
 
@@ -37,9 +42,14 @@ function App() {
                                     <>
                                         <HoverCounter />
                                         <ClickCounter />
+                                        <ClickCounterHoc />
+                                        <HoverCounterHoc />
                                     </>
                                 }
-                            ></Route>
+                            />
+                            <Route path="useEffect" element={<UseEffect />} />
+                            <Route path="UseCallbackAndMemo" element={<UseCallbackAndMemo />} />
+                            <Route path="UseRefAndForwardRef" element={<UseRefAndForwardRef />} />
                         </Route>
                     </Routes>
                 </div>
