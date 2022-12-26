@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
-const UseRefAndForwardRef = () => {
+const UseRef = () => {
     const inputRef = useRef();
 
     useEffect(() => {
@@ -25,4 +25,4 @@ const UseRefAndForwardRef = () => {
     );
 };
 
-export default UseRefAndForwardRef;
+export default UseRef;

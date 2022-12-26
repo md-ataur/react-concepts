@@ -29,7 +29,12 @@ class Form extends React.Component {
 
         return (
             <div>
-                <h4>Controlled component and uncontrolled component</h4>
+                <h4>
+                    In a controlled component, the value of the input element is controlled by
+                    React. In an uncontrolled component, the value of the input element is
+                    controlled by the DOM itself.
+                </h4>
+                <hr />
                 <br />
                 <input type="text" value={title} onChange={this.handleChange} />
                 <p>{title}</p>

@@ -150,12 +150,32 @@ const Sidebar = ({ isSideMenuOpen }) => {
                         </li>
                         <li>
                             <NavLink
-                                to="/UseRefAndForwardRef"
+                                to="/useRef"
                                 className={({ isActive }) =>
                                     isActive ? 'menu-active-class' : 'no-active-class'
                                 }
                             >
-                                <div className="menu-list">useRef & forwardRef</div>
+                                <div className="menu-list">useRef</div>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to="/forwardRef"
+                                className={({ isActive }) =>
+                                    isActive ? 'menu-active-class' : 'no-active-class'
+                                }
+                            >
+                                <div className="menu-list">forwardRef</div>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to="/useReducer"
+                                className={({ isActive }) =>
+                                    isActive ? 'menu-active-class' : 'no-active-class'
+                                }
+                            >
+                                <div className="menu-list">useReducer</div>
                             </NavLink>
                         </li>
                     </ul>

@@ -9,9 +9,11 @@ import ClickCounter from './components/HigherOrderComponent/ClickCounter';
 import ClickCounterHoc from './components/HigherOrderComponent/HOC/ClickCounter';
 import HoverCounterHoc from './components/HigherOrderComponent/HOC/HoverCounter';
 import HoverCounter from './components/HigherOrderComponent/HoverCounter';
+import ForwardRef from './components/Hooks/ForwardRef/ForwardRef';
 import UseCallbackAndMemo from './components/Hooks/UseCallbackAndMemo/UseCallbackAndMemo';
 import UseEffect from './components/Hooks/UseEffect/UseEffect';
-import UseRefAndForwardRef from './components/Hooks/UseRefAndForwardRef/UseRefAndForwardRef';
+import UseReducer from './components/Hooks/UseReducer/UseReducer';
+import UseRef from './components/Hooks/UseRef/UseRef';
 import RenderProps from './components/RenderProps/RenderProps';
 import StateAndLifecycle from './components/StateAndLifecycle/StateAndLifecycle';
 
@@ -49,7 +51,9 @@ function App() {
                             />
                             <Route path="useEffect" element={<UseEffect />} />
                             <Route path="UseCallbackAndMemo" element={<UseCallbackAndMemo />} />
-                            <Route path="UseRefAndForwardRef" element={<UseRefAndForwardRef />} />
+                            <Route path="useRef" element={<UseRef />} />
+                            <Route path="forwardRef" element={<ForwardRef />} />
+                            <Route path="useReducer" element={<UseReducer />} />
                         </Route>
                     </Routes>
                 </div>
