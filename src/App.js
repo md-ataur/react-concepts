@@ -1,3 +1,5 @@
+import React from 'react';
+import { QueryClient, QueryClientProvider } from 'react-query';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Emoji from './components/CompositionVSInheritance/Composition/Emoji';
 import Text2 from './components/CompositionVSInheritance/Composition/Text';
@@ -14,10 +16,13 @@ import UseCallbackAndMemo from './components/Hooks/UseCallbackAndMemo/UseCallbac
 import UseEffect from './components/Hooks/UseEffect/UseEffect';
 import UseReducer from './components/Hooks/UseReducer/UseReducer';
 import UseRef from './components/Hooks/UseRef/UseRef';
+import ReactQuery from './components/ReactQuery/ReactQuery';
 import RenderProps from './components/RenderProps/RenderProps';
 import StateAndLifecycle from './components/StateAndLifecycle/StateAndLifecycle';
 
 function App() {
+    const client = new QueryClient();
+
     return (
         <>
             <BrowserRouter>
@@ -54,6 +59,20 @@ function App() {
                             <Route path="useRef" element={<UseRef />} />
                             <Route path="forwardRef" element={<ForwardRef />} />
                             <Route path="useReducer" element={<UseReducer />} />
+                            <Route
+                                path="fetch"
+                                element={
+                                    <QueryClientProvider client={client}>
+                                        <h4>React Query</h4>
+                                        <hr />
+
+                                        <h3>First time data fetch from the server</h3>
+                                        <ReactQuery />
+                                        <h3>Second time data fetch from the cache</h3>
+                                        <ReactQuery />
+                                    </QueryClientProvider>
+                                }
+                            />
                         </Route>
                     </Routes>
                 </div>

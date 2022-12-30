@@ -180,6 +180,25 @@ const Sidebar = ({ isSideMenuOpen }) => {
                         </li>
                     </ul>
                 </div>
+                <NavLink
+                    to="/fetch"
+                    end
+                    className={({ isActive }) =>
+                        isActive ? 'menu-active-class' : 'no-active-class'
+                    }
+                >
+                    <div className="menu-list">
+                        <div className="menu-list-left">
+                            <span
+                                className={
+                                    !isSideMenuOpen ? 'sidebar-closed-menu' : 'menu-list-left-text'
+                                }
+                            >
+                                Side Effect
+                            </span>
+                        </div>
+                    </div>
+                </NavLink>
             </div>
         </div>
     );
