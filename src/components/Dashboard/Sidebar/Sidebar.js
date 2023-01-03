@@ -199,6 +199,25 @@ const Sidebar = ({ isSideMenuOpen }) => {
                         </div>
                     </div>
                 </NavLink>
+                <NavLink
+                    to="/debounce"
+                    end
+                    className={({ isActive }) =>
+                        isActive ? 'menu-active-class' : 'no-active-class'
+                    }
+                >
+                    <div className="menu-list">
+                        <div className="menu-list-left">
+                            <span
+                                className={
+                                    !isSideMenuOpen ? 'sidebar-closed-menu' : 'menu-list-left-text'
+                                }
+                            >
+                                Debounce
+                            </span>
+                        </div>
+                    </div>
+                </NavLink>
             </div>
         </div>
     );

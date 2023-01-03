@@ -5,6 +5,7 @@ import Emoji from './components/CompositionVSInheritance/Composition/Emoji';
 import Text2 from './components/CompositionVSInheritance/Composition/Text';
 import Text from './components/CompositionVSInheritance/Inheritance/Text';
 import Layout from './components/Dashboard/Layout/Layout';
+import Debounce from './components/Debounce/Debounce';
 import Form from './components/Form/Form';
 import HandlingEvents from './components/HandlingEvents/HandlingEvents';
 import ClickCounter from './components/HigherOrderComponent/ClickCounter';
@@ -59,6 +60,7 @@ function App() {
                             <Route path="useRef" element={<UseRef />} />
                             <Route path="forwardRef" element={<ForwardRef />} />
                             <Route path="useReducer" element={<UseReducer />} />
+                            <Route path="debounce" element={<Debounce />} />
                             <Route
                                 path="fetch"
                                 element={
